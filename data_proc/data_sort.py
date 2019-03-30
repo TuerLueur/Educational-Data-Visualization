@@ -1,6 +1,11 @@
 import csv
 
-file_stu = '../education_data/2_student_info.csv'
+# input file
+file_cj = '../organized_data/cj_valid.csv'
+file_teacher = '../education_data/1_teacher.csv'
+
+# output file
+cj_average = '../organized_data/cj_average'
 
 out_stu_925 = '../organized_data/out_stu_925.csv'
 

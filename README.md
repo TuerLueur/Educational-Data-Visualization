@@ -1,3 +1,1 @@
 # Educational Data Visualization System
-
-
