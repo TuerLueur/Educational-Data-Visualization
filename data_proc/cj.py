@@ -1,4 +1,8 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import csv
+
 
 file_cj = '../education_data/5_chengji.csv'
 out_stu_925 = '../organized_data/out_stu_925.csv'

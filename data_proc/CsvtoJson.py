@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import os, csv, json
 
 csv_in = '../education_data/shuxue_925.csv'

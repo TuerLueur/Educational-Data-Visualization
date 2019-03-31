@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import csv
 
 # input file
@@ -18,13 +21,11 @@ header_cj_valid = ['cla_id', 'cla_Name',
                    'mes_sub_id', 'mes_sub_name',
                    'exam_number', 'exam_numname', 'exam_type', 'exam_sdate', 'mes_TestID',
                    'mes_StudentID', 'mes_Score','mes_Z_Score', 'mes_T_Score', 'mes_dengdi']
-list_cj_valid = []
 
 header_cj_invalid =['cla_id', 'cla_Name',
                    'mes_sub_id', 'mes_sub_name',
                    'exam_number', 'exam_numname', 'exam_type', 'exam_sdate', 'mes_TestID',
                    'mes_StudentID', 'mes_Score']
-list_cj_invalid = []
 
 cj_in = open(file_cj)
 cj_out_v = open(cj_valid, 'w', newline = '')
@@ -72,4 +73,3 @@ for row_in in reader_cj:
 cj_in.close()
 cj_out_v.close()
 cj_out_i.close()
-
