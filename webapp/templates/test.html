@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 引入Echarts文件 -->
+  <script src="../echarts.js"></script>
+  <script src="../jquery-3.3.1.min.js" type="text/javascript"></script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="main" style="height: 100%"></div>
+
+  <script type="text/javascript">
+     myChart = echarts.init(document.getElementById("main"));
+    var app = {};
+    var option = null;
+    option = {
+      title: {
+        text: '数学-高三(10)班历史成绩'
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data: ['最高分', '最低分']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: true,
+        data: []
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [{
+          name: '最高分',
+          type: 'line',
+          data: []
+        },
+        {
+          name: '最低分',
+          type: 'line',
+          data: []
+        }
+      ]
+    };
+    if (option && typeof option === "object") {
+      myChart.setOption(option, true);
+    }
+
+    $.getJSON('../organized_data/shuxue_925.json', function(data) {
+      myChart.setOption({
+        xAxis: {
+          data: data.exam_numname
+        },
+        series: [{
+          name: '最高分',
+          data: data.max_score
+        }, {
+          name: '最低分',
+          data: data.min_score
+        }]
+      });
+    });
+  </script>
+</body>
+
+</html>
