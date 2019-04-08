@@ -6,10 +6,10 @@ import codecs
 
 
 def get_conn():
-    conn = pymysql.connect(host='localhost',\
-                           port=3306, user='root',\
-                           passwd='ground',\
-                           db='vis',\
+    conn = pymysql.connect(host='localhost',
+                           port=3306, user='root',
+                           passwd='ground',
+                           db='vis',
                            charset='utf8')
     return conn
 
