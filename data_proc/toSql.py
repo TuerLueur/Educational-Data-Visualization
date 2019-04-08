@@ -6,9 +6,9 @@ import codecs
 
 
 def get_conn():
-    conn = pymysql.connect(host='localhost',
-                           port=3306, user='root',
-                           passwd='ground',
+    conn = pymysql.connect(host='132.232.66.243',
+                           port=33060, user='root',
+                           passwd='viswebapp',
                            db='vis',
                            charset='utf8')
     return conn

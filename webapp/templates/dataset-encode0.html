@@ -61,18 +61,17 @@
     }
 
     $.ajax({
-      url: "get_course3",
+      url: "get-course3",
       type: "POST",
       dataType: "json",
-      success: function (data) {
+      success: function(data) {
         myChart.setOption({
-        dataset: {
-          source : data
-        }
-      })
+          dataset: {
+            source: data
+          }
+        })
       }
     })
-
   </script>
 </body>
 
